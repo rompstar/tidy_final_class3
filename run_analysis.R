@@ -21,8 +21,6 @@ if (!file.exists("UCI HAR Dataset")) {
   unzip(download_file, exdir="class3_final/")
 }
 
-# using the plyr library
-#library(plyr)
 
 X_train <- read.table("class3_final/UCI HAR Dataset/train/X_train.txt")
 X_test <- read.table("class3_final/UCI HAR Dataset/test/X_test.txt")
@@ -56,6 +54,8 @@ names(Y_merge2) <- "activity"
 
 # merge eveything together all the data in a single data set
 all_merge <- cbind(X_merge2, Y_merge2, subject_data)
+
+library(“dyplyr”)
 
 # use dyplry to apply mean over all the columns and re-order activity and subject
 tidydata <- all_merge %>% group_by(subject,activity) %>% summarise_each(funs(mean))
