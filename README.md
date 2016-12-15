@@ -6,7 +6,7 @@ out of #10 within the Data Science Specialization track.
 The accompaning R script, `run_analysis.R`, does the following:
 
 1. The script downloads the dataset if it does not already exists into a subfolder of the working directory.
-2. The script then looks at the files names of the downloaded ZIP files without un-zipping the file.
+2. The script then looks at the files names of the downloaded ZIP file without un-zipping the file.
 3. The script then un-zipps the files if not already un-zipped.
 4. The script reads in the X_train, X_test, Y_train, Y_test, subjects_train and subjects_test data into independent variables.
 5. The script then reads in the features and activities information.
