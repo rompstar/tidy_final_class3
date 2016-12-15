@@ -58,7 +58,7 @@ names(Y_merge2) <- "activity"
 all_merge <- cbind(X_merge2, Y_merge2, subject_data)
 
 # use dyplry to apply mean over all the columns and re-order activity and subject
-tidydata <- reordercolumns %>% group_by(subject,activity) %>% summarise_each(funs(mean))
+tidydata <- all_merge %>% group_by(subject,activity) %>% summarise_each(funs(mean))
 
 # Create the Tidy data file and suppress the row names
 write.table(tidy_data, "class3_final/UCI HAR Dataset/tidy_data.txt", row.name=FALSE)
