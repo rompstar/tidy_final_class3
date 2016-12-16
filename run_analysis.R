@@ -12,7 +12,7 @@ library(dplyr)
 ## STEP 1 download the data set, look at it and unzip it if files does not exists 
 
 ## set the working direcotry for the project  
-setwd("C:/Users/Y775/Desktop/R/class3_final/");
+setwd("~/class3_final/");
 project_directory <- getwd();
 project_directory
 
